@@ -1,0 +1,225 @@
+{
+  "schema": "inventory-aging/v1",
+  "company": "Northwind Components",
+  "currency": "USD",
+  "period": "month",
+  "conventions": {
+    "bucketMix": "bucket / total inventory, where total is the sum of finite 0-30, 31-60, 61-90, and 90+ buckets",
+    "pct90Plus": "90+ inventory / total inventory",
+    "reserveCoverage": "obsolescenceReserve / 90+ inventory",
+    "mom": "this month minus prior month",
+    "vsTarget": "pct90Plus and writeOffs are ceilings (meeting when value <= target); mix030 and reserveCoverage are floors (meeting when value >= target)"
+  },
+  "targets": {
+    "mix030": 0.5,
+    "pct90Plus": 0.12,
+    "reserveCoverage": 0.8,
+    "writeOffs": 75000
+  },
+  "targetPolarity": {
+    "mix030": "floor",
+    "pct90Plus": "ceiling",
+    "reserveCoverage": "floor",
+    "writeOffs": "ceiling"
+  },
+  "months": [
+    {
+      "month": "2025-01",
+      "buckets": {
+        "0-30": 980000,
+        "31-60": 420000,
+        "61-90": 240000,
+        "90+": 180000
+      },
+      "obsolescenceReserve": 144000,
+      "writeOffs": 38000
+    },
+    {
+      "month": "2025-02",
+      "buckets": {
+        "0-30": 990000,
+        "31-60": 430000,
+        "61-90": 250000,
+        "90+": 210000
+      },
+      "obsolescenceReserve": 168000,
+      "writeOffs": 41000
+    },
+    {
+      "month": "2025-03",
+      "buckets": {
+        "0-30": 1020000,
+        "31-60": 440000,
+        "61-90": 250000,
+        "90+": 200000
+      },
+      "obsolescenceReserve": 170000,
+      "writeOffs": 36000
+    },
+    {
+      "month": "2025-04",
+      "buckets": {
+        "0-30": 1030000,
+        "31-60": 450000,
+        "61-90": 260000,
+        "90+": 210000
+      },
+      "obsolescenceReserve": 168000,
+      "writeOffs": 44000
+    },
+    {
+      "month": "2025-05",
+      "buckets": {
+        "0-30": 1060000,
+        "31-60": 470000,
+        "61-90": 270000,
+        "90+": 240000
+      },
+      "obsolescenceReserve": 180000,
+      "writeOffs": 52000
+    },
+    {
+      "month": "2025-06",
+      "buckets": {
+        "0-30": 1080000,
+        "31-60": 500000,
+        "61-90": 300000,
+        "90+": 300000
+      },
+      "obsolescenceReserve": 210000,
+      "writeOffs": 68000
+    },
+    {
+      "month": "2025-07",
+      "buckets": {
+        "0-30": 1020000,
+        "31-60": 520000,
+        "61-90": 340000,
+        "90+": 380000
+      },
+      "obsolescenceReserve": 228000,
+      "writeOffs": 92000
+    },
+    {
+      "month": "2025-08",
+      "buckets": {
+        "0-30": 1120000,
+        "31-60": 510000,
+        "61-90": 300000,
+        "90+": 280000
+      },
+      "obsolescenceReserve": 224000,
+      "writeOffs": 61000
+    },
+    {
+      "month": "2025-09",
+      "buckets": {
+        "0-30": 1220000,
+        "31-60": 520000,
+        "61-90": 280000,
+        "90+": 260000
+      },
+      "obsolescenceReserve": 221000,
+      "writeOffs": 48000
+    },
+    {
+      "month": "2025-10",
+      "buckets": {
+        "0-30": 1260000,
+        "31-60": 530000,
+        "61-90": 270000,
+        "90+": 260000
+      },
+      "obsolescenceReserve": 234000,
+      "writeOffs": 45000
+    },
+    {
+      "month": "2025-11",
+      "buckets": {
+        "0-30": 1320000,
+        "31-60": 540000,
+        "61-90": 270000,
+        "90+": 280000
+      },
+      "obsolescenceReserve": 252000,
+      "writeOffs": 47000
+    },
+    {
+      "month": "2025-12",
+      "buckets": {
+        "0-30": 1180000,
+        "31-60": 560000,
+        "61-90": 360000,
+        "90+": 480000
+      },
+      "obsolescenceReserve": 288000,
+      "writeOffs": 118000
+    },
+    {
+      "month": "2026-01",
+      "buckets": {
+        "0-30": 1240000,
+        "31-60": 530000,
+        "61-90": 290000,
+        "90+": 300000
+      },
+      "obsolescenceReserve": 240000,
+      "writeOffs": 72000
+    },
+    {
+      "month": "2026-02",
+      "buckets": {
+        "0-30": 1300000,
+        "31-60": 540000,
+        "61-90": 280000,
+        "90+": 270000
+      },
+      "obsolescenceReserve": 243000,
+      "writeOffs": 54000
+    },
+    {
+      "month": "2026-03",
+      "buckets": {
+        "0-30": 1360000,
+        "31-60": 540000,
+        "61-90": 270000,
+        "90+": 270000
+      },
+      "obsolescenceReserve": 256500,
+      "writeOffs": 49000
+    },
+    {
+      "month": "2026-04",
+      "buckets": {
+        "0-30": 1400000,
+        "31-60": 550000,
+        "61-90": 270000,
+        "90+": 260000
+      },
+      "obsolescenceReserve": 260000,
+      "writeOffs": 43000
+    },
+    {
+      "month": "2026-05",
+      "buckets": {
+        "0-30": 1440000,
+        "31-60": 550000,
+        "61-90": 260000,
+        "90+": 260000
+      },
+      "obsolescenceReserve": 273000,
+      "writeOffs": 40000
+    },
+    {
+      "month": "2026-06",
+      "buckets": {
+        "0-30": 1500000,
+        "31-60": 540000,
+        "61-90": 240000,
+        "90+": 270000
+      },
+      "obsolescenceReserve": 286000,
+      "writeOffs": 36000
+    }
+  ]
+}
